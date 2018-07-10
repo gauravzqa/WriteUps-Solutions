@@ -1,0 +1,82 @@
+natas0:
+natas0:
+
+# natas1:
+gtVrDuiDfck831PqWsLEZy5gyDz1clto
+
+# natas2:
+ZluruAthQk7Q2MqmDeTiUij2ZvWy2mBi
+
+# natas3:
+sJIJNW6ucpu6HPZ1ZAchaDtwd7oGrD14
+
+###additional info i got during the game###
+username:password
+alice:BYNdCesZqW
+bob:jw2ueICLvT
+charlie:G5vCxkVV3m
+eve:zo4mJWyNj2
+mallory:9urtcpzBmH
+### end ####
+
+# natas4:
+   Natas3 has the same text as natas2, “There is nothing on this page” but that’s not entirely true. There’s a hint in the source code:
+
+< !-- No more information leaks!! Not even Google will find it this time... -- >
+
+I still didn’t get it, so I went over to ircs.overthewire.org #waregames and asked the HintBot for a hint. It replayed with “Hint(50): natas3: think like a search engine”. So I then looked up How web search engines work, there it say “The site owner can exclude specific pages by using robots.txt.”. Ok, so let us check if this file exists http://natas3.natas.labs.overthewire.org/robots.txt.
+
+User-agent: *
+Disallow: /s3cr3t/
+
+This mean that all user-agents should not find “/s3cr3t/” in a search, well let see what’s inside this folder then. http://natas3.natas.labs.overthewire.org/s3cr3t/. There’s a “user.txt” and the content of this file is:
+
+	The password for natas4 is:	
+	Z9tkRkWmpt9Qr7XrR5jWRkgOU901swEZ
+
+# natas5
+
+here we see
+
+	Access disallowed. You are visiting from "" while authorized users should come only from "http://natas5.natas.labs.overthewire.org/"
+
+on refreshing we see
+
+	Access disallowed. You are visiting from "http://natas4.natas.labs.overthewire.org" while authorized users should come only from "http://natas5.natas.labs.overthewire.org/"
+
+ edit the header response and add 
+	[Referer: http://natas5.natas.labs.overthewire.org/]
+this gives us the password: iX6IOfmpN7AYOQGPwtn3fXpbaJVJcHfq 
+
+
+# natas6
+
+the page greets us with a message "Acess dissallowed, you are not logged in ".
+this hints us to check the cookies
+there we'll find loggedin and its value =0
+change it to 1 and you will get the password
+
+the password is: aGoY4q2Dc6MgDq4oL4YtoKtyAg9PeHa1
+
+
+# natas7
+
+here you'll be asked to input a secret phrase, which might confuse you because you have none.
+so we check the source code of the page
+in the php code we see that include/secret.inc is included, so we go and check the page where we find the secret phrase.
+
+<?
+$secret = "FOEIUWGHFEEUHOFUOIU";
+?>
+
+
+the password is: 7z3hEENjQtflzgnT29q7wAvMNfZdh0i9
+
+# natas8
+
+
+the password is: DBfUBfqQG69KvJvJ1iAbMoIpwSNQ9bWe
+
+
+
+
