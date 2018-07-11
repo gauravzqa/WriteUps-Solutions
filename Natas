@@ -35,7 +35,6 @@ This mean that all user-agents should not find “/s3cr3t/” in a search, well 
 	Z9tkRkWmpt9Qr7XrR5jWRkgOU901swEZ
 
 # natas5
-
 here we see
 
 	Access disallowed. You are visiting from "" while authorized users should come only from "http://natas5.natas.labs.overthewire.org/"
@@ -50,7 +49,6 @@ this gives us the password: iX6IOfmpN7AYOQGPwtn3fXpbaJVJcHfq
 
 
 # natas6
-
 the page greets us with a message "Acess dissallowed, you are not logged in ".
 this hints us to check the cookies
 there we'll find loggedin and its value =0
@@ -60,7 +58,6 @@ the password is: aGoY4q2Dc6MgDq4oL4YtoKtyAg9PeHa1
 
 
 # natas7
-
 here you'll be asked to input a secret phrase, which might confuse you because you have none.
 so we check the source code of the page
 in the php code we see that include/secret.inc is included, so we go and check the page where we find the secret phrase.
@@ -68,15 +65,12 @@ in the php code we see that include/secret.inc is included, so we go and check t
 <?
 $secret = "FOEIUWGHFEEUHOFUOIU";
 ?>
-
-
 the password is: 7z3hEENjQtflzgnT29q7wAvMNfZdh0i9
 
 # natas8
-
-
 the password is: DBfUBfqQG69KvJvJ1iAbMoIpwSNQ9bWe
 
-
+# natas9
+the password is: W0mMhUcRRnG8dcghE4qvk3JA9lGt8nDl
 
 
