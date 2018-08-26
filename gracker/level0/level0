@@ -1,0 +1,9 @@
+### so at level0 we get to know that Mr. Cool Zero have installed a backdoor through which he can enter level1, the executable level0 has group permission for level0 of read and execute.
+so on first thought, "string level0" will do your job, but you can also reverse engineer the executable to extract the password file like a pro *Hackerman*(all the best)
+so the password to access the backdoor is "s3cr3t_backd00r_passw0rd"
+and you'll get the password for level1 : "TVeB0MIlx0KB"
+
+ *gdb method*
+so we see that function at this address ->$0x600df0 stores value of the secret password in register name $esi
+fo reading the value of register esi will yield us the secret password, also whatevert input we are entering to the ./level0 file is stored in $rax and $rdi, so they will give back the value we are entering.
+set another breakpoint at strcmp and reading the values of these registers will give us the secret pass.

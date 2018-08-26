@@ -1,0 +1,7 @@
+### Tools you may want to have a look at for this level:
+ ● `nmap` - Network exploration tool and security / port scanner
+ ● `nc`, `netcat` - TCP/IP swiss army knife
+ ● watching TRON: LEGACY
+
+so first here we need to scan for the open port in range 1453-3501 and using nmap we found that 2898 was the only avialable option, connect to this port and you'll find something you have already seen in TRON and you know how to enter the grid. Then there is nothing that can stop you from mocking ZeroCool.
+level password: @XpLtpZhqtiG

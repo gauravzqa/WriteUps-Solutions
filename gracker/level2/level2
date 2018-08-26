@@ -1,0 +1,4 @@
+### so in this we see a small change from the prev challenge, here Zero Cool has stored the encrypted password. But instead of decrypting it and comparing it to our entered password, the program is encrypting our password and checking it agains his, also it is pretty clear that he has used XOR encryption method and "0x41" as the xorkey.
+searching for xor encryption gave us that applying the xor encryption again on the encrypted password gives us the original string back.
+backdoor pass: h0w_is_th1s_h4ck3r_f0ll0wing_m3
+level password: kgg9ki?iDero

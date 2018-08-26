@@ -1,0 +1,6 @@
+### so in this level we have to see how PATH environment works and basic commands execute so here we see a source file and its executable version running it gives the sys info and avialable users also the credentials of setuid binaries, so instead of having uname print the system information, we can have it print out the password to the next level.
+* Create a temporary directory
+* Create a uname file in the directory with contents cat /home/level5/.pass
+* Make the uname file executable
+then run the file and get the password, be happy.
+level password: svNa9463?k4m

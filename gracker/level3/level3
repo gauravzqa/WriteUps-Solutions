@@ -1,0 +1,14 @@
+### there is only a buffer that is 64byte wide, but gets() can read a lot of more characters and
+tries to store them in the buffer:
+
+    char buffer[64];
+    gets(buffer);
+
+If you look at the manpage of gets, you will read the following (`man gets`):
+  
+  BUGS
+       Never  use  gets().  Because it is impossible to tell without knowing the data in advance how many characters gets() will read,
+       and because gets() will continue to store characters past the end of the buffer, it is extremely dangerous to use.  It has been
+       used to break computer security.
+now we will try to overflow the buffer of size 64, so that will change the value of admin-enabled variable from 0 to something that we dont care, but the fact is that it will do the work and we will get the password for next level.
+level password: 0LRS6_hjGzCf
